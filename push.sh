@@ -1,3 +1,6 @@
+#!/bin/bash
+set -e
 git add .
-git commit -m "update"
-git push
+git commit -m "${1:-update}"
+git push origin main
+
