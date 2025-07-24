@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wil-playground
+  name: playground
   namespace: dev
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: wil-playground
+      app: playground
   template:
     metadata:
       labels:
-        app: wil-playground
+        app: playground
     spec:
       containers:
-        - name: wil-playground
-          image: wil42/playground:v2
+        - name: playground
+          image: tufankurukaya/iot-app:v2
           ports:
             - containerPort: 8888
 
